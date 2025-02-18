@@ -28,11 +28,22 @@
          John Styles
          </td>
          <td>
-             <?php if($dayOfWeek == "Friday" || $dayOfWeek == "Monday" || $dayOfWeek == "Wednesday"){ ?>
-             <b>8:00 - 12:00</b> 
-             <?php } else { ?>
-               <b>Не рабочий день</b>
-               <?php } ?>
+            <?php
+            switch ($dayOfWeek) {
+               case 'Monday':
+                  echo "8:00 - 12:00";
+                  break;
+               case 'Wednesday':
+                     echo "8:00 - 12:00";
+                  break;
+               case 'Friday':
+                     echo "8:00 - 12:00";
+                  break;
+               default:
+                     echo "Не рабочий день";
+                  break;
+            }
+            ?>
          </td>
       </tr>
       <tr>
@@ -43,12 +54,23 @@
             Jane Doe
          </td>
          <td>
-            <?php if($dayOfWeek == "Tuesday" || $dayOfWeek == "Thursday" || $dayOfWeek == "Saturday"){ ?>
-               <b>12:00 - 16:00</b>
-               <?php } else { ?>
-                  <b>Не рабочий день</b>
-                  <?php } ?>
-               </td>
+         <?php
+            switch ($dayOfWeek) {
+               case 'Tuesday':
+                     echo "12:00 - 16:00";
+               break;
+               case 'Thursday':
+                     echo "12:00 - 16:00";
+               break;
+               case 'Saturday':
+                  echo "12:00 - 16:00";
+               break;
+               default:
+                     echo "Не рабочий день";
+                  break;
+            }
+            ?>
+         </td>
       </tr>
    </table>
 </body>
